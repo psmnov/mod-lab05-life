@@ -448,7 +448,7 @@ namespace cli_life
 
         private void SaveStatisticsToTxt(List<double> xdata, List<double> ydata)
         {
-            string path = Path.Combine(_dataDir, "statistics.Txt");
+            string path = Path.Combine(_dataDir, "data.txt");
             using StreamWriter writer = new StreamWriter(path);
 
             writer.WriteLine("density,avg_generations");
