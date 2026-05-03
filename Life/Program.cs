@@ -428,7 +428,7 @@ namespace cli_life
                 ydata.Add(sum / runs);
             }
 
-            SaveStatisticsToCSV(xdata, ydata);
+            SaveStatisticsToTxt(xdata, ydata);
 
             List<double> smoothed = new();
             for (int i = 0; i < ydata.Count; i++)
@@ -446,9 +446,9 @@ namespace cli_life
             OpenImage(imgPath);
         }
 
-        private void SaveStatisticsToCSV(List<double> xdata, List<double> ydata)
+        private void SaveStatisticsToTxt(List<double> xdata, List<double> ydata)
         {
-            string path = Path.Combine(_dataDir, "statistics.csv");
+            string path = Path.Combine(_dataDir, "statistics.Txt");
             using StreamWriter writer = new StreamWriter(path);
 
             writer.WriteLine("density,avg_generations");
