@@ -440,7 +440,7 @@ namespace cli_life
 
             plt.Add.Scatter(xdata, smoothed);
 
-            string imgPath = Path.Combine(_dataDir, "statistics.png");
+            string imgPath = Path.Combine(_dataDir, "plot.png");
             plt.SavePng(imgPath, 800, 600);
 
             OpenImage(imgPath);
